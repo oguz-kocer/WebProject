@@ -1,0 +1,51 @@
+﻿@page
+@model Business.Concrete.ProductManager
+@{
+    ViewData["Title"] = "Home page";
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<html>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome(Hoş Geldiniz)</h1>
+    <p>(Deneme) <a href="https://docs.microsoft.com/aspnet/core">Bu ürün ekleme sayfası deneme amaçlı oluşturulmuştur.</a>.</p>
+</div>
+<div class="context" style="width:400px; margin-left:34%; margin-bottom:10%; margin-top:5%;">
+       <div class="col-md-12">
+           <div class="card">
+               <div class="card-header"><h5 class="title">Ürün Ekle</h5></div>
+               <div class="card-body">
+                   <form method="post">
+                       <div class="mb-3">
+                           <label>Category Id</label>
+
+                           <div class="form-group">
+                               <input type="number" name="ProductCategoryID" class="form-control" placeholder="Category Id" />
+                           </div>
+                       </div>
+
+                       <div class="mb-3">
+                           <label>Product Name</label>
+
+                           <div class="form-group">
+                               <input type="text" name="Name" class="form-control" placeholder="ProductName" />
+                           </div>
+                       </div>
+
+                       <div class="mb-3">
+                           <label>List Price</label>
+
+                           <div class="form-group">
+                               <input type="number" name="ListPrice" class="form-control" placeholder="ListPrice" />
+                           </div>
+                       </div>
+
+                       <div class="form-group">
+                           <button class="btn btn-fill btn-primary w-25">Add</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+</html>
