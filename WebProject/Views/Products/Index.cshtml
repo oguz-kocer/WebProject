@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Entities.Concrete.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Here is the Products List Page</h3>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <div class="card-body">
+                            <h1>Product List</h1>
+
+                            <p>
+                                <a class="btn btn-success" asp-action="Create">Create New Product</a>
+                            </p>
+
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Name)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.ProductNumber)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.MakeFlag)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.FinishedGoodsFlag)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Color)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.SafetyStockLevel)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.ReorderPoint)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.StandardCost)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.ListPrice)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Size)
+                                        </th>
+                                        
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.DaysToManufacture)
+                                        </th>
+                                        
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.SellStartDate)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Rowguid)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.ModifiedDate)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.ProductSubcategory)
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Name)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.ProductNumber)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.MakeFlag)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FinishedGoodsFlag)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Color)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SafetyStockLevel)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.ReorderPoint)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.StandardCost)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.ListPrice)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Size)
+                                            </td>
+                                            
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.DaysToManufacture)
+                                            </td>
+                                            
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SellStartDate)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Rowguid)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.ModifiedDate)
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary btn-sm" asp-action="Edit" asp-controller="Products" asp-route-id="@item.ProductId"><i class="fas fa-folder"></i> Edit</a> |
+                                                <a class="btn btn-info btn-sm" asp-action="Details" asp-controller="Products" asp-route-id="@item.ProductId"><i class="fas fa-pencil-alt"></i>Details</a> |
+                                                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-controller="Products" asp-route-id="@item.ProductId"><i class="fas fa-trash"></i>Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
+</div>
